@@ -63,44 +63,48 @@
         </div>
 
         <script>
-          var darkModeCnt = 0;
+            var darkModeCnt = 0;
 
-          /* navbar 토글 **/
-          $('.navbar-toggler').on('click', function () {
-            $('.list-group').toggleClass('show');
-          });
+            /* navbar 토글 **/
+            $('.navbar-toggler').on('click', function () {
+                $('.list-group').toggleClass('show');
+            });
 
+            $('.badge').on('click', function () {
+                darkModeCnt++;
+                if ((darkModeCnt % 2) == 0) {
+                    $('.badge').html('Dark 🔄');
+                } else {
+                    $('.badge').html('Light 🔄');
+                }
+            });
 
-          $('.badge').on('click', function() {
-            darkModeCnt ++;
-            if ((darkModeCnt % 2) == 0) {
-              $('.badge').html('Dark 🔄');
-            } else {
-              $('.badge').html('Light 🔄');
-            }
-          });
+            /* login 기능 **/
+            $('#login').on('click', function () {
+                $('.black-bg').addClass('show-modal');
+            });
 
-          /* login 기능 **/
-          $('#login').on('click', function () {
-              $('.black-bg').addClass('show-modal');
-          });
+            $('#close').on('click', function () {
+                $('.black-bg').removeClass('show-modal');
+            });
 
-          $('#close').on('click', function () {
-              $('.black-bg').removeClass('show-modal');
-          });
+            $('form').on('submit', function (e) {
+                var pw = $('#pwd').val();
 
-          $('form').on('submit', function (e) {
-              if ($('#id').val() == '') {
-                  alert('아이디를 입력하셈');
-                  e.preventDefault();
-              } else if ($('#pwd').val() == '') {
-                  alert('비번이 없잖음');
-                  e.preventDefault();
-              } else if ($('#pwd').val().length < 6) {
-                  alert('비번이 짧아요');
-                  e.preventDefault();
-              }
-          });
+                if ($('#id').val() == '') {
+                    alert('아이디를 입력하셈');
+                    e.preventDefault();
+                } else if ($('#pwd').val() == '') {
+                    alert('비번이 없잖음');
+                    e.preventDefault();
+                } else if ($('#pwd').val().length < 6) {
+                    alert('비번이 짧음');
+                    e.preventDefault();
+                } else if (/[A-Z]/.test(pw) == false) {
+                    alert('대문자가 포함되야함');
+                    e.preventDefault();
+                }
+            });
         </script>
 
         <!-- Option 1: Bootstrap Bundle with Popper -->
