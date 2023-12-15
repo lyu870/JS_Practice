@@ -1,25 +1,21 @@
 :root { scroll-behavior : auto }
 
 html {
-    line-height: 1.15; /* 1 */
-    -webkit-text-size-adjust: 100%; /* 2 */
-  }
-  
-  div, input, textarea {
-      box-sizing: border-box;
-  }
-  
-  body {
-    margin: 0;
-  }
-  
-  main {
-    display: block;
-  }
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
 
-  button {
-    border-color: rgba(52, 43, 43, 0.752);
-  }
+div, input, textarea {
+    box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  display: block;
+}
   
 
   .alertBox {

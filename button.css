@@ -1,15 +1,13 @@
 button {
-    font-family: sans-serif;
+
+    border-color: #333333;
+
     font-weight: bold;
   
     background-color: #fff;
-    color: #777;
     border-radius: 100px;
-    border-color: #eeeeee;
     z-index: -1;
-    padding: 15px 40px;
+    padding: 15px 35px;
+    margin: 3px;
     display: inline-block;
-  
-    animation: moveInBottom 5s ease-out;
-    animation-fill-mode: backwards;
 }
