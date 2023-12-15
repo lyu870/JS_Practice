@@ -1,3 +1,4 @@
+/* 부트스트랩 설치 후 스크롤 이상현상 방지**/
 :root { scroll-behavior : auto }
 
 html {

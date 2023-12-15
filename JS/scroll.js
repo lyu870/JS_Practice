@@ -4,10 +4,11 @@ $(window).on('scroll', function(){
     if(scrW >= 100) {
         $('.navbar-brand').css("font-size", "20px");
     } else {
-        $('.navbar-brand').css("font-size", "32px");
+        $('.navbar-brand').css("font-size", "30px");
     }
 });
 
+/* div스크롤바 다 내리면 alert 'OK' 출력 **/
 $('.lorem').on('scroll', function() {
     var scrL = $(this).scrollTop();
     var height = $('.lorem').height();
