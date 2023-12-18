@@ -19,6 +19,6 @@ $('.lorem').on('scroll', function() {
 
     if( ((scrL + height) == scrRH) && done == 0) {
         done = 1;
-        alert('OK');
+        alert('다 읽음');
     }
 });

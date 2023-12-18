@@ -14,7 +14,7 @@ $('form').on('submit', function(e){
         e.preventDefault();
     }
     else if ( /[A-Z]/.test(pw) == false ) {
-        alert('비번안에 영어대문자가 있어야해요');
+        alert('비번안에 영어대문자 포함해서 입력하셔야해요');
         e.preventDefault();
     }
 });
