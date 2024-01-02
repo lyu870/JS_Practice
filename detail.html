@@ -30,14 +30,13 @@
             <select class="form-select mt-2">
                 <option>모자</option>
                 <option>셔츠</option>
+                <option>바지</option>
             </select>
-            <select class="form-select mt-2 hide">
-              <option>95</option>
-              <option>100</option>
+            <select class="form-select mt-2">
+              <option>55</option>
+              <option>56</option>
           </select>
         </form>
-
-
 
 
           <div class="container mt-5">
@@ -53,21 +52,36 @@
               <p>스펙설명입니다. Information</p>
             </div>
             <div class="tab-content">
-              
               <p>배송정보입니다. Shipping</p>
             </div>
           </div> 
 
         <script>
 
-          var a = $('.form-select').eq(0).val();
+          $('.form-select').eq(0).on('input', function(){
+            var product = $('.form-select').eq(0).val();
+            if (product == '모자') {
+              $('.form-select').eq(1).html('');
+              var size = `<option>55</option><option>56</option>`;
+              $('.form-select').eq(1).append(size);
+            }
+            else if (product == '셔츠') {
+              $('.form-select').eq(1).html('');
+              var size = `<option>90</option><option>95</option>`;
+              $('.form-select').eq(1).append(size);
+            }
+            else if (product == '바지'){
+              $('.form-select').eq(1).html('');
+              var size = `<option>28</option><option>30</option>`;
+              $('.form-select').eq(1).append(size);
+            }
+          });
             
         </script>
     
         <!-- JS파일목록-->
         <script src="JS/tab.js"></script>
         <script src="JS/imgSlide.js"></script>
-        <script src="JS/input_id.js"></script>
         <script src="JS/darkMode.js"></script>
         <script src="JS/scroll.js"></script>
         <script
