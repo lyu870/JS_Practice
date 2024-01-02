@@ -62,28 +62,51 @@
               display: block;
             }
           </style>
+          
+          <div class="card-group container">
+            <div class="card">
+              <img src="https://via.placeholder.com/600">
+              <div class="card-body">
+                <h5 class="BD-title">Card title</h5>
+                <p class="BD-price">가격 : 70000</p>
+                <button class="btn btn-danger">주문하기</button>
+              </div>
+            </div>
+            <div class="card">
+              <img src="https://via.placeholder.com/600">
+              <div class="card-body">
+                <h5 class="shirt-title">Card title</h5>
+                <p class="shirt-price">가격 : 70000</p>
+                <button class="btn btn-danger">주문하기</button>
+              </div>
+            </div>
+            <div class="card">
+              <img src="https://via.placeholder.com/600">
+              <div class="card-body">
+                <h5 class="BM-title">Card title</h5>
+                <p class="BM-price">가격 : 70000</p>
+                <button class="btn btn-danger">주문하기</button>
+              </div>
+            </div>
+          </div>
+          
+          <script>
+            var products = [
+              { id : 0, price : 70000, title : 'Blossom Dress' },
+              { id : 1, price : 50000, title : 'Springfield Shirt' },
+              { id : 2, price : 60000, title : 'Black Monastery' }
+            ];
 
-          <div class="container mt-5">
-            <ul class="list">
-              <li class="tab-button">Products</li>
-              <li class="tab-button orange">Information</li>
-              <li class="tab-button">Shipping</li>
-            </ul>
-            <div class="tab-content">
-              <p>상품설명입니다. Product</p>
-            </div>
-            <div class="tab-content show">
-              <p>스펙설명입니다. Information</p>
-            </div>
-            <div class="tab-content">.
-              
-              <p>배송정보입니다. Shipping</p>
-            </div>
-          </div> 
+            $('.BD-title').html(products[0].title);
+            $('.BD-price').html("가격 : " + products[0].price);
 
-        <script>
-            
-        </script>
+            $('.shirt-title').html(products[1].title);
+            $('.shirt-price').html("가격 : " + products[1].price);
+
+            $('.BM-title').html(products[2].title);
+            $('.BM-price').html("가격 : " + products[2].price);
+
+          </script>
     
         <!-- JS파일목록-->
         <script src="JS/tab.js"></script>
