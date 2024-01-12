@@ -105,8 +105,18 @@
 
             $('.card-body h5').eq(2).html(products[2].title);
             $('.card-body p').eq(2).html("가격 : " + products[2].price);
+    
+
+            $.get('https://codingapple1.github.io/hello.txt')
+              .done(function(data){
+                console.log(data)
+              })
+              .fail(function(error){
+                console.log('실패함')
+              });
 
           </script>
+
     
         <!-- JS파일목록-->
         <script src="JS/tab.js"></script>
