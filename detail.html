@@ -58,24 +58,45 @@
 
         <script>
 
+          var hat = [54, 55, 56, 57];
+          var shirts = [90, 95, 100, 105];
+          var pants = [28, 30, 32, 34];
+          
+
           $('.form-select').eq(0).on('input', function(){
             var product = $('.form-select').eq(0).val();
             if (product == '모자') {
               $('.form-select').eq(1).html('');
-              var size = `<option>55</option><option>56</option>`;
-              $('.form-select').eq(1).append(size);
+              hat.forEach(function(i) {
+                $('.form-select').eq(1).append(`<option>${i}</option>`);
+              });
             }
             else if (product == '셔츠') {
               $('.form-select').eq(1).html('');
-              var size = `<option>90</option><option>95</option>`;
-              $('.form-select').eq(1).append(size);
+              shirts.forEach(function(i) {
+                $('.form-select').eq(1).append(`<option>${i}</option>`);
+              });
             }
             else if (product == '바지'){
               $('.form-select').eq(1).html('');
-              var size = `<option>28</option><option>30</option>`;
-              $('.form-select').eq(1).append(size);
+              pants.forEach(function(i) {
+                $('.form-select').eq(1).append(`<option>${i}</option>`);
+              });
             }
           });
+
+          var 출석부 = ['흥민', '영희', '철수', '재석'];
+
+          function gugudan() {
+            for(i=2; i<=9; i++) {
+              for(j=1; j<=9; j++) {
+                console.log(i*j);
+              }
+            }
+          }
+
+          gugudan();
+
             
         </script>
     
